@@ -1,9 +1,11 @@
 .cb-services {
     .service-card {
+        text-decoration: none;
         height: 100%;
         padding: 1rem;
         display: flex;
         flex-direction: column;
+        transition: transform var(--transition);
         h3 {
             min-height: 2em;
         }
@@ -11,16 +13,29 @@
             margin-top: auto;
             align-self: flex-end;
         }
+        &:hover {
+            text-decoration: none;
+            transform: translateY(2px);
+        }
     }
     .service-card--projects {
+        text-decoration: none;
         display: grid;
-        @media(min-width: 768px) {
-            grid-template-columns: 1fr 1fr;
-        }
+        transition: transform var(--transition);
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        .service-card:hover {
+            transform: none;
+        }
+        &:hover {
+            text-decoration: none;
+            transform: translateY(2px);
+        }
+        @media(min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }

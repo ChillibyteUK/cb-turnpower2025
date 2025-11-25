@@ -22217,10 +22217,12 @@ header .dropdown.current-menu-item > .nav-link {
 }
 
 .cb-services .service-card {
+  text-decoration: none;
   height: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition);
 }
 .cb-services .service-card h3, .cb-services .service-card .h3 {
   min-height: 2em;
@@ -22229,19 +22231,32 @@ header .dropdown.current-menu-item > .nav-link {
   margin-top: auto;
   align-self: flex-end;
 }
-.cb-services .service-card--projects {
-  display: grid;
+.cb-services .service-card:hover {
+  text-decoration: none;
+  transform: translateY(2px);
 }
-@media (min-width: 768px) {
-  .cb-services .service-card--projects {
-    grid-template-columns: 1fr 1fr;
-  }
+.cb-services .service-card--projects {
+  text-decoration: none;
+  display: grid;
+  transition: transform var(--transition);
 }
 .cb-services .service-card--projects img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+.cb-services .service-card--projects .service-card:hover {
+  transform: none;
+}
+.cb-services .service-card--projects:hover {
+  text-decoration: none;
+  transform: translateY(2px);
+}
+@media (min-width: 768px) {
+  .cb-services .service-card--projects {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .cb-sectors .sector-card {
