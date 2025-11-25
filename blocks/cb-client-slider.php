@@ -57,11 +57,10 @@ add_action(
 			loop: true,
 			slidesPerView: 1,
 			spaceBetween: 30,
-			autoplay: false,
-			// {
-			// 	delay: 3000,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: false,
+			},
 			breakpoints: {
 				480: {
 					slidesPerView: 2,
