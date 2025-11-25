@@ -22456,6 +22456,7 @@ header .dropdown.current-menu-item > .nav-link {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 }
 .client-index__image-wrapper {
   aspect-ratio: 16/9;
