@@ -22475,7 +22475,7 @@ header .dropdown.current-menu-item > .nav-link {
 .client-index__title {
   font-size: var(--fs-500);
   font-weight: var(--fw-semi);
-  margin: 1rem 1rem 0rem 1rem;
+  margin: 1rem 1rem 0.5rem 1rem;
 }
 .client-index__content {
   flex-grow: 1;
