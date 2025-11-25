@@ -1,0 +1,26 @@
+<?php
+/**
+ * Block template for CB Hero.
+ *
+ * @package cb-turnpower2025
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+$bg = get_field( 'background_image' );
+?>
+<div class="hero">
+	<?= wp_get_attachment_image( $bg, 'full', false, array( 'class' => 'hero__image' ) ); ?>
+	<div class="overlay"></div>
+	<div class="content">
+		<div class="container h-100">
+			<div class="row h-100">
+				<div class="col-lg-7 my-auto">
+					<h1 class="has-dot"><?= esc_html( get_field( 'title' ) ); ?></h1>
+					<div class="words mb-4"><?= wp_kses_post( get_field( 'intro' ) ); ?></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hero-swoop"></div>
+</div>

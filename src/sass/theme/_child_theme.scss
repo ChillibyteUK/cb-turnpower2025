@@ -1,0 +1,56 @@
+@import "typography";
+@import "colours";
+@import "buttons";
+@import "header";
+@import "footer";
+@import "forms";
+@import "blocks/blocks";
+
+body {
+  background-color: var(--col-white);
+}
+
+// Adjust fixed header when admin bar is present
+.admin-bar header.fixed-top {
+  top: 32px; // Admin bar height
+}
+
+@media (min-width: 992px) {
+  .cols-lg-2 {
+    columns: 2;
+  }
+  .cols-lg-3 {
+    columns: 3;
+  }
+}
+
+#breadcrumbs {
+  font-size: var(--text-sm);
+  a {
+    text-decoration: none;
+    font-weight: var(--fw-600);
+    color: var(--col-black);
+  }
+}
+
+.wp-block-group {
+  &:not(.alignfull) {
+    @extend .container;
+    & .container {
+      padding-inline: 0;
+    }
+  }
+}
+.container .container {
+  padding-inline: 0;
+}
+
+main {
+  margin-top: var(--h-top);
+}
+
+
+.form-control {
+  border-radius: 0;
+}
+

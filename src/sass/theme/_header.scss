@@ -1,0 +1,97 @@
+header {
+  background-color: #ffffff;
+  transition: var(--transition);
+
+  font-family: var(--ff-body);
+
+  .navbar {
+    height: 100%;
+    .container {
+      border-bottom: 1px solid var(--col-blue-200);
+    }
+  }
+
+  .navbar-toggler {
+    i {
+      color: var(--col-accent-400);
+    }
+  }
+
+  #navbar {
+    height: 100%;
+  }
+
+  .gap-6 {
+    gap: 4rem !important;
+  }
+
+  .navbar-nav {
+    margin-block: 0;
+  }
+
+  a,
+  a.nav-link {
+    color: var(--col-blue-900);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-semi);
+    transition: var(--transition);
+    display: inline-block;
+    text-decoration: none;
+    text-transform: initial;
+    padding: 0;
+    @media (min-width: 992px) {
+      &:hover {
+        color: var(--col-blue-400);
+        text-decoration: none;
+      }
+    }
+    &:focus {
+      color: var(--col-blue-400);
+      text-decoration: none;
+    }
+  }
+
+  .navbar-brand {
+    background-image: url(../img/turnpower-logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    aspect-ratio: 366.6 / 121.24;
+    width: 257px;
+    height: 85px;
+    margin-right: 0;
+  }
+
+  .current_page_item > .nav-link,
+  .current_page_parent > .nav-link,
+  .dropdown.current-page-ancestor > .nav-link,
+  .dropdown.current-menu-item > .nav-link {
+    color: var(--col-blue-400);
+    font-weight: var(--fw-semi);
+  }
+
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      background: var(--col-white);
+      min-height: 100svh;
+      /* Do not set display:flex or height, let Bootstrap animate */
+    }
+    .navbar-nav {
+      width: 100%;
+      padding-bottom: 2rem;
+    }
+    .nav-link,
+    .navbar-nav .nav-link {
+      font-size: var(--fs-400);
+      font-weight: var(--fw-semi);
+      padding: 1rem 0;
+    }
+    .dropdown-item {
+      font-size: var(--fs-400);
+    }
+
+    .fs-subtle a {
+      font-size: var(--fs-400);
+    }
+  }
+}

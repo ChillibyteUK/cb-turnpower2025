@@ -1,0 +1,70 @@
+$col-primary: #1D0F44;
+$col-dark: #222222;
+$col-darkest: #4a4a4a;
+$col-light: #f2f2f2;
+
+:root {
+  /* =========================
+     COLOURS (HSL + computed)
+     ========================= */
+
+  --col-white-hsl: 0 0% 100%; /* #FFFFFF – pure white */
+  --col-white: hsl(var(--col-white-hsl));
+
+  --col-black-hsl: 256 63.9% 16.3%; /* #1A1938 – not pure black */
+  --col-black: hsl(var(--col-black-hsl));
+
+  --col-blue-900-hsl: 242 38% 16%;; /* #1A1938 – dark blue */
+  --col-blue-900: hsl(var(--col-blue-900-hsl));
+
+  --col-blue-400-hsl: 202 99% 39%; /* #017DC5 – main blue */
+  --col-blue-400: hsl(var(--col-blue-400-hsl));
+
+  --col-blue-300-hsl: 196 99% 40%;  /* #0198CD – light blue */
+  --col-blue-300: hsl(var(--col-blue-300-hsl));
+
+  --col-blue-200-hsl: 207 26% 93%;  /* #E9EEF2 – lightest blue */
+  --col-blue-200: hsl(var(--col-blue-200-hsl));
+
+  --col-yellow-400-hsl: 63 99% 45%;
+  --col-yellow-400: hsl(var(--col-yellow-400-hsl));
+
+  --col-andwis-400: #21AD66;
+  --col-andwis-900: #1C401F;
+
+  /* =========================
+     TYPOGRAPHY (families/weights)
+     ========================= */
+  --ff-body:
+    "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  --fw-bold: 600; /* Bold */
+  --fw-semi: 500; /* semi */
+  --fw-regular: 300; /* Light */
+
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+
+  /* =========================
+     TYPOGRAPHY (responsive sizes)
+     ========================= */
+  --fs-200: 0.79rem;
+  --fs-300: 0.889rem;
+  --fs-400: 1rem;
+  --fs-450: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem);
+  --fs-500: clamp(1.13rem, calc(0.97rem + 0.76vw), 1.56rem);
+  --fs-600: clamp(1.27rem, calc(1.03rem + 1.20vw), 1.95rem);
+  --fs-700: clamp(1.42rem, calc(1.07rem + 1.77vw), 2.44rem);
+  --fs-800: clamp(1.80rem, calc(1.10rem + 3.50vw), 3.82rem);
+  --fs-900: clamp(2.03rem, calc(1.07rem + 4.77vw), 4.77rem);
+
+  --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  /* === Utilities === */
+  --transition: 250ms ease-out;
+
+  --h-top: 100px;
+  --h-top-desktop: 0;
+}

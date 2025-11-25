@@ -1,0 +1,18 @@
+.accreditations {
+    .container {
+        border-top: 1px solid var(--col-blue-200);
+        padding-block-start: 3rem;
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    img {
+        height: 100px;
+        width: 120px;
+        object-fit: contain;
+        object-position: center;
+    }
+}

@@ -1,0 +1,113 @@
+{
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "palette": [
+        {
+          "name": "white",
+          "slug": "white",
+          "color": "hsl(0 0% 100%)",
+          "origin": "theme"
+        },
+        {
+          "name": "black",
+          "slug": "black",
+          "color": "hsl(256 63.9% 16.3%)",
+          "origin": "theme"
+        },
+        {
+          "name": "blue-900",
+          "slug": "blue-900",
+          "color": "hsl(242 38% 16%)",
+          "origin": "theme"
+        },
+        {
+          "name": "blue-400",
+          "slug": "blue-400",
+          "color": "hsl(202 99% 39%)",
+          "origin": "theme"
+        },
+        {
+          "name": "blue-300",
+          "slug": "blue-300",
+          "color": "hsl(196 99% 40%)",
+          "origin": "theme"
+        },
+        {
+          "name": "blue-200",
+          "slug": "blue-200",
+          "color": "hsl(207 26% 93%)",
+          "origin": "theme"
+        },
+        {
+          "name": "yellow-400",
+          "slug": "yellow-400",
+          "color": "hsl(63 99% 45%)",
+          "origin": "theme"
+        },
+        {
+          "name": "andwis-400",
+          "slug": "andwis-400",
+          "color": "#21AD66",
+          "origin": "theme"
+        },
+        {
+          "name": "andwis-900",
+          "slug": "andwis-900",
+          "color": "#1C401F",
+          "origin": "theme"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "name": "200",
+          "slug": "200",
+          "size": "0.79rem"
+        },
+        {
+          "name": "300",
+          "slug": "300",
+          "size": "0.889rem"
+        },
+        {
+          "name": "400",
+          "slug": "400",
+          "size": "1rem"
+        },
+        {
+          "name": "450",
+          "slug": "450",
+          "size": "clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem)"
+        },
+        {
+          "name": "500",
+          "slug": "500",
+          "size": "clamp(1.13rem, calc(0.97rem + 0.76vw), 1.56rem)"
+        },
+        {
+          "name": "600",
+          "slug": "600",
+          "size": "clamp(1.27rem, calc(1.03rem + 1.20vw), 1.95rem)"
+        },
+        {
+          "name": "700",
+          "slug": "700",
+          "size": "clamp(1.42rem, calc(1.07rem + 1.77vw), 2.44rem)"
+        },
+        {
+          "name": "800",
+          "slug": "800",
+          "size": "clamp(1.80rem, calc(1.10rem + 3.50vw), 3.82rem)"
+        },
+        {
+          "name": "900",
+          "slug": "900",
+          "size": "clamp(2.03rem, calc(1.07rem + 4.77vw), 4.77rem)"
+        }
+      ]
+    }
+  }
+}

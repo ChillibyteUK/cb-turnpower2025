@@ -1,0 +1,52 @@
+.text-image img {
+    aspect-ratio: 1 / 1;
+    border-radius: 100vw;
+    width: 100%;
+    max-width: 500px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+
+.text-image ul {
+    list-style: circle;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.text-image ol {
+  counter-reset: item;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text-image ol li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 3rem; /* space for number */
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding-bottom: 1rem;
+}
+
+.text-image ol li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #3d8bfd; /* match your blue */
+  line-height: 1;
+}
+
+.text-image ol li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  bottom: -1rem;
+  width: 1px;
+  height: 1rem;
+}
