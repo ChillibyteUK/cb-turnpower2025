@@ -117,6 +117,7 @@ function acf_blocks() {
                     'align'     => true,
                     'color'     => array(
                         'background' => true,
+						'text'       => false,
                     ),
                 ),
             )
