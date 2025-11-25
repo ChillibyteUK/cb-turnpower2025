@@ -26,20 +26,18 @@ defined( 'ABSPATH' ) || exit;
 			),
 		);
 		if ( $sectors->have_posts() ) {
-			echo '<div class="row g-4">';
+			echo '<div class="sectors-grid">';
 			while ( $sectors->have_posts() ) {
 				$sectors->the_post();
 				?>
-				<div class="col-md-6 col-lg-3">
-					<a class="sector-card h-100" href="<?php the_permalink(); ?>">
-						<?php if ( has_post_thumbnail() ) : ?>
-							<div class="sector-card__image mb-3">
-								<?php the_post_thumbnail( 'large', array( 'class' => 'img-fluid' ) ); ?>
-							</div>
-						<?php endif; ?>
-						<h3 class="fs-500 fw-600 text-uppercase"><?php the_title(); ?></h3>
-					</a>
-				</div>
+				<a class="sector-card" href="<?php the_permalink(); ?>">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<div class="sector-card__image mb-3">
+							<?php the_post_thumbnail( 'large', array( 'class' => 'img-fluid' ) ); ?>
+						</div>
+					<?php endif; ?>
+					<h3 class="fs-500 fw-600 text-uppercase"><?php the_title(); ?></h3>
+				</a>
 				<?php
 			}
 			echo '</div>';

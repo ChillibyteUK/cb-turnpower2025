@@ -22259,14 +22259,30 @@ header .dropdown.current-menu-item > .nav-link {
   }
 }
 
+.cb-sectors .sectors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
 .cb-sectors .sector-card {
   text-decoration: none;
-  height: 100%;
+  flex: 0 0 calc(50% - 0.75rem);
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .cb-sectors .sector-card {
+    flex: 0 0 calc(33.333% - 1rem);
+  }
+}
+@media (min-width: 992px) {
+  .cb-sectors .sector-card {
+    flex: 0 0 calc(20% - 1.2rem);
+  }
 }
 .cb-sectors .sector-card__image {
   aspect-ratio: 1;

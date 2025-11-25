@@ -88,6 +88,7 @@ function buildThemeJson(tokens) {
     settings: {
       appearanceTools: true,
       color: { 
+        defaultPalette: false,
         palette: colors.map(color => ({
           ...color,
           origin: 'theme'

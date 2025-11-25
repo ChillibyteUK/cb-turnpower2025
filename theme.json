@@ -3,6 +3,7 @@
   "settings": {
     "appearanceTools": true,
     "color": {
+      "defaultPalette": false,
       "palette": [
         {
           "name": "white",
