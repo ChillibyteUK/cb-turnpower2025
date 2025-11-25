@@ -115,6 +115,10 @@ function acf_blocks() {
                     'anchor'    => true,
                     'className' => true,
                     'align'     => true,
+                    'color'     => array(
+                        'background' => true,
+                        'text'       => true,
+                    ),
                 ),
             )
         );

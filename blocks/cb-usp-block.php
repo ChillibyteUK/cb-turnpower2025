@@ -7,37 +7,33 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$bg_choice = get_field( 'background' );
-
-switch ( $bg_choice ) {
-	case 'light-blue':
-		$bg_class = 'has-blue-200-background-color has-background has-white-color';
-		break;
-	case 'black':
-		$bg_class = 'has-black-background-color has-background has-white-color';
-		break;
-	case 'red':
-    	$bg_class = 'has-red-background-color has-background has-white-color';
-    	break;
-	case 'purple':
-    	$bg_class = 'has-purple-background-color has-background has-white-color';
-    	break;
-	case 'green':
-    	$bg_class = 'has-green-background-color has-background has-white-color';
-    	break;
-	case 'burgundy':
-		$bg_class = 'has-burgundy-background-color has-background has-white-color';
-    	break;
-  	case 'blue':
-	default:
-    	$bg_class = 'has-blue-900-background-color has-background has-white-color';
-    	break;
+$class_name = 'usp-block';
+if ( ! empty( $block['className'] ) ) {
+	$class_name .= ' ' . $block['className'];
 }
+if ( ! empty( $block['align'] ) ) {
+	$class_name .= ' align' . $block['align'];
+}
+
+$styles = array();
+if ( ! empty( $block['backgroundColor'] ) ) {
+	$class_name .= ' has-' . $block['backgroundColor'] . '-background-color has-background';
+} elseif ( ! empty( $block['style']['color']['background'] ) ) {
+	$styles[] = 'background-color: ' . esc_attr( $block['style']['color']['background'] );
+}
+
+if ( ! empty( $block['textColor'] ) ) {
+	$class_name .= ' has-' . $block['textColor'] . '-color has-text-color';
+} elseif ( ! empty( $block['style']['color']['text'] ) ) {
+	$styles[] = 'color: ' . esc_attr( $block['style']['color']['text'] );
+}
+
+$style_attr = ! empty( $styles ) ? ' style="' . implode( '; ', $styles ) . '"' : '';
 ?>
-<section class="usp-block <?= esc_attr( $bg_class ); ?>">
+<section class="<?= esc_attr( $class_name ); ?>"<?= $style_attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-md-9 has-white-color py-5 text-center fs-600">
+			<div class="col-md-9 py-5 text-center fs-600">
 				<?= wp_kses_post( get_field( 'usp_text' ) ); ?>
         		<?php
 				$cta_link = get_field( 'cta' );
