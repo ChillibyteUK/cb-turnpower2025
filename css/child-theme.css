@@ -22532,6 +22532,13 @@ body {
   color: var(--col-black);
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -150px;
+  visibility: hidden;
+}
+
 .wp-block-group:not(.alignfull) .container, .wp-block-group:not(.alignfull) .wp-block-group:not(.alignfull) {
   padding-inline: 0;
 }
