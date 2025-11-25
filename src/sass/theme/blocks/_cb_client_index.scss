@@ -11,14 +11,13 @@
     &__image-wrapper {
         aspect-ratio: 16 / 9;
         width: 100%;
-        object-fit: contain;
         overflow: hidden;
         background-color: white;
     }
     &__image {
         aspect-ratio: 16 / 9;
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
     }
     &__title {
