@@ -29,18 +29,26 @@ defined( 'ABSPATH' ) || exit;
 					?>
 					<div class="col d-flex align-items-center justify-content-center">
 						<div class="client-index__card">
-							<?=
-							get_the_post_thumbnail(
-								get_the_ID(),
-								'full',
-								array(
-									'alt'   => get_the_title(),
-									'class' => 'client-index__image',
-								)
-							);
-							?>
+							<div class="client-index__image-wrapper">
+								<?=
+								get_the_post_thumbnail(
+									get_the_ID(),
+									'full',
+									array(
+										'alt'   => get_the_title(),
+										'class' => 'client-index__image',
+									)
+								);
+								?>
+							</div>
 							<h3 class="client-index__title fw-bold fs-500"><?= esc_html( get_the_title() ); ?></h3>
+							<?php
+							if ( get_the_content() ) {
+								?>
 							<div class="client-index__content"><?= wp_kses_post( get_the_content() ); ?></div>
+								<?php
+							}
+							?>
 						</div>
 					</div>
 					<?php
