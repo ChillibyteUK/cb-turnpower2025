@@ -22396,7 +22396,7 @@ header .dropdown.current-menu-item > .nav-link {
 .hero {
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: 500px;
   isolation: isolate;
   color: var(--col-white);
 }
