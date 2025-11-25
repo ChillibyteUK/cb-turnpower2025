@@ -163,67 +163,6 @@
             "delay": 0
         },
         {
-            "key": "field_68dd131b3aaa5",
-            "label": "Foreground",
-            "name": "foreground",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "black": "Black",
-                "white": "White"
-            },
-            "default_value": "black",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
-            "key": "field_68dd13428413c",
-            "label": "Background",
-            "name": "background",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "white": "White",
-                "black": "Black",
-                "secondary-light": "Grey",
-                "primary-400": "Light Green",
-                "primary-900": "Dark Green"
-            },
-            "default_value": "white",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
             "key": "field_68a04b869de20",
             "label": "Image",
             "name": "image",
@@ -286,5 +225,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764080052
+    "modified": 1764080177
 }
