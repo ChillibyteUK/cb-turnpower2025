@@ -15,22 +15,11 @@ if ( ! empty( $block['align'] ) ) {
 	$class_name .= ' align' . $block['align'];
 }
 
-$styles = array();
 if ( ! empty( $block['backgroundColor'] ) ) {
 	$class_name .= ' has-' . $block['backgroundColor'] . '-background-color has-background';
-} elseif ( ! empty( $block['style']['color']['background'] ) ) {
-	$styles[] = 'background-color: ' . esc_attr( $block['style']['color']['background'] );
 }
-
-if ( ! empty( $block['textColor'] ) ) {
-	$class_name .= ' has-' . $block['textColor'] . '-color has-text-color';
-} elseif ( ! empty( $block['style']['color']['text'] ) ) {
-	$styles[] = 'color: ' . esc_attr( $block['style']['color']['text'] );
-}
-
-$style_attr = ! empty( $styles ) ? ' style="' . implode( '; ', $styles ) . '"' : '';
 ?>
-<section class="<?= esc_attr( $class_name ); ?>"<?= $style_attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<section class="<?= esc_attr( $class_name ); ?>">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-9 py-5 text-center fs-600">
