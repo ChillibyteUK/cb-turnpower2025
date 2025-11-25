@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 <section class="full-image-background-text">
-	<div class="background-image" style="background-image: url('<?= esc_url( wp_get_attachment_image_url( get_field( 'background' ), 'full' ) ); ?>');"></div>
+	<?= wp_get_attachment_image( get_field( 'background' ), 'full', false, array( 'class' => 'background-image' ) ); ?>
 	<div class="overlay"></div>
 	<div class="container h-100">
 		<div class="row h-100">
