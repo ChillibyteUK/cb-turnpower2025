@@ -37,7 +37,7 @@ switch ( $bg_choice ) {
 <section class="usp-block <?= esc_attr( $bg_class ); ?>">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-md-9 has-white-color py-5 text-center fw-bold fs-subtle">
+			<div class="col-md-9 has-white-color py-5 text-center fs-600">
 				<?= wp_kses_post( get_field( 'usp_text' ) ); ?>
         		<?php
 				$cta_link = get_field( 'cta' );
