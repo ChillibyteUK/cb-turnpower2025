@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 <section class="cb-sectors py-5">
-	<div class="container py-5">
+	<div class="container">
 		<h2 class="has-dot">Specialists Across</h2>
 		<?php
 		// get the sectors page ID from path.
@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
 					<a class="sector-card h-100" href="<?php the_permalink(); ?>">
 						<?php if ( has_post_thumbnail() ) : ?>
 							<div class="sector-card__image mb-3">
-								<?php the_post_thumbnail( 'medium_large', array( 'class' => 'img-fluid' ) ); ?>
+								<?php the_post_thumbnail( 'large', array( 'class' => 'img-fluid' ) ); ?>
 							</div>
 						<?php endif; ?>
 						<h3 class="fs-500 fw-600 text-uppercase"><?php the_title(); ?></h3>
@@ -49,3 +49,4 @@ defined( 'ABSPATH' ) || exit;
 		}
 		?>
 	</div>
+</section>
