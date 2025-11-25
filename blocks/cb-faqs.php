@@ -8,7 +8,7 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<section class="faq">
+<section class="faq pb-5">
 	<div class="container">
 		<?php
 		if ( get_field( 'title' ) ) {
