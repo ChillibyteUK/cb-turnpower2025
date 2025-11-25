@@ -1,0 +1,11 @@
+.client-slider {
+    .swiper-slide {
+        background-color: white;
+        img {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

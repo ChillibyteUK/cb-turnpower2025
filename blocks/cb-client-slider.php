@@ -29,15 +29,13 @@ defined( 'ABSPATH' ) || exit;
 					<?php
 					while ( $client_posts->have_posts() ) {
 						$client_posts->the_post();
-						?>
-						<div class="swiper-slide">
-							<?php
-							if ( has_post_thumbnail() ) {
-								echo get_the_post_thumbnail( get_the_ID(), 'medium', array( 'alt' => get_the_title() ) );
-							}
+						if ( has_post_thumbnail() ) {
 							?>
+						<div class="swiper-slide">
+							<?= get_the_post_thumbnail( get_the_ID(), 'full', array( 'alt' => get_the_title() ) ); ?>
 						</div>
-						<?php
+							<?php
+						}
 					}
 					wp_reset_postdata();
 					?>
@@ -59,10 +57,11 @@ add_action(
 			loop: true,
 			slidesPerView: 1,
 			spaceBetween: 30,
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
+			autoplay: false,
+			// {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
 			breakpoints: {
 				480: {
 					slidesPerView: 2,
