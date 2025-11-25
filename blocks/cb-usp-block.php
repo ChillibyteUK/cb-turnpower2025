@@ -19,7 +19,7 @@ if ( ! empty( $block['backgroundColor'] ) ) {
 	$class_name .= ' has-' . $block['backgroundColor'] . '-background-color has-background';
 }
 ?>
-<section class="<?= esc_attr( $class_name ); ?>">
+<section class="<?= esc_attr( $class_name ); ?> has-white-color">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-9 py-5 text-center fs-600">
