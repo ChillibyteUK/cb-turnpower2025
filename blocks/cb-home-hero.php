@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 					<div class="words mb-4"><?= wp_kses_post( get_field( 'words' ) ); ?></div>
 					<?php
 					if ( get_field( 'button' ) ) {
-						$button = get_field( 'button' );
+						$button     = get_field( 'button' );
 						$btn_url    = $button['url'];
 						$btn_title  = $button['title'];
 						$btn_target = $button['target'] ? $button['target'] : '_self';

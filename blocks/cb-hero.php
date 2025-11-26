@@ -18,6 +18,17 @@ $bg = get_field( 'background_image' );
 				<div class="col-lg-7 my-auto">
 					<h1 class="has-dot"><?= esc_html( get_field( 'title' ) ); ?></h1>
 					<div class="words mb-4"><?= wp_kses_post( get_field( 'intro' ) ); ?></div>
+					<?php
+					if ( get_field( 'button' ) ) {
+						$button     = get_field( 'button' );
+						$btn_url    = $button['url'];
+						$btn_title  = $button['title'];
+						$btn_target = $button['target'] ? $button['target'] : '_self';
+						?>
+					<a href="<?= esc_url( $btn_url ); ?>" target="<?= esc_attr( $btn_target ); ?>" class="btn btn--primary"><?= esc_html( $btn_title ); ?></a>
+						<?php
+					}
+					?>
 				</div>
 			</div>
 		</div>

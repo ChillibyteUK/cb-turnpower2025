@@ -72,7 +72,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -87,6 +87,23 @@
             "mime_types": "",
             "allow_in_bindings": 0,
             "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_69272b0d8a08e",
+            "label": "Button",
+            "name": "button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -108,5 +125,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764068978
+    "modified": 1764174631
 }
