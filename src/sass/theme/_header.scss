@@ -75,6 +75,15 @@ header {
   }
 
   @media (max-width: 991px) {
+    /* Prevent horizontal overflow in Chrome device emulation */
+    .navbar {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
     .navbar-collapse {
       background: var(--col-white);
       min-height: 100svh;
