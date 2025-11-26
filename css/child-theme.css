@@ -22081,7 +22081,7 @@ header .dropdown.current-menu-item > .nav-link {
 
 .home-hero {
   position: relative;
-  height: 80vh;
+  height: 80svh;
   min-height: 600px;
   overflow: hidden;
   isolation: isolate;
