@@ -57,17 +57,17 @@
 
 /* Primary (accent) */
 .btn--primary {
-  --_bg: var(--col-primary-400);
+  --_bg: var(--col-blue-400);
   --_fg: var(--col-white);
-  --_bd: var(--col-primary-400);
+  --_bd: var(--col-blue-400);
   color: var(--_fg);
   background: var(--_bg);
   border-color: var(--_bd);
 }
 .btn:hover,
 .btn:active {
-  background: var(--col-primary-400-hover);
-  border-color: var(--col-primary-400-hover);
+  background: color-mix(in srgb, var(--col-blue-400), white 10%);
+  border-color: var(--col-blue-400);
   color: initial;
 }
 

@@ -33,7 +33,7 @@ function cb_register_post_types() {
 				'not_found_in_trash' => 'No clients in trash',
 			),
 			'has_archive'        => false,
-			'publicly_queryable' => false, // (keeps single pages accessible)
+			'publicly_queryable' => true, // (keeps single pages accessible)
 			'public'             => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
@@ -43,7 +43,10 @@ function cb_register_post_types() {
 			'supports'           => array( 'title', 'thumbnail', 'editor' ),
 			'capability_type'    => 'post',
 			'map_meta_cap'       => true,
-			'rewrite'            => false,
+			'rewrite'            => array(
+				'slug'       => 'our-clients',
+				'with_front' => false,
+			),
 		),
 	);
 

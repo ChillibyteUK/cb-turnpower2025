@@ -28,7 +28,17 @@ defined( 'ABSPATH' ) || exit;
 					$client_posts->the_post();
 					?>
 					<div class="col d-flex align-items-center justify-content-center">
+						<?php
+						if ( get_the_content() ) { // is full case study with content.
+							?>
+						<a href="<?php the_permalink(); ?>" class="client-index__card">
+							<?php
+						} else { // just the card.
+							?>
 						<div class="client-index__card">
+							<?php
+						}
+						?>
 							<div class="client-index__image-wrapper">
 								<?=
 								get_the_post_thumbnail(
@@ -43,13 +53,21 @@ defined( 'ABSPATH' ) || exit;
 							</div>
 							<h3 class="client-index__title fw-bold fs-500"><?= esc_html( get_the_title() ); ?></h3>
 							<?php
+							if ( get_field( 'client_excerpt', get_the_ID() ) ) {
+								?>
+							<div class="client-index__content"><?= wp_kses_post( get_field( 'client_excerpt', get_the_ID() ) ); ?></div>
+								<?php
+							}
 							if ( get_the_content() ) {
 								?>
-							<div class="client-index__content"><?= wp_kses_post( get_the_content() ); ?></div>
+						</a>
+								<?php
+							} else {
+								?>
+						</div>
 								<?php
 							}
 							?>
-						</div>
 					</div>
 					<?php
 				}

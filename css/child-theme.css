@@ -21844,9 +21844,9 @@ figure {
 
 /* Primary (accent) */
 .btn--primary {
-  --_bg: var(--col-primary-400);
+  --_bg: var(--col-blue-400);
   --_fg: var(--col-white);
-  --_bd: var(--col-primary-400);
+  --_bd: var(--col-blue-400);
   color: var(--_fg);
   background: var(--_bg);
   border-color: var(--_bd);
@@ -21855,8 +21855,8 @@ figure {
 .btn:hover, .gform_button:hover,
 .btn:active,
 .gform_button:active {
-  background: var(--col-primary-400-hover);
-  border-color: var(--col-primary-400-hover);
+  background: color-mix(in srgb, var(--col-blue-400), white 10%);
+  border-color: var(--col-blue-400);
   color: initial;
 }
 
@@ -22487,6 +22487,13 @@ header .dropdown.current-menu-item > .nav-link {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  text-decoration: none;
+  transition: border-color var(--transition), background-color var(--transition);
+}
+.client-index a.client-index__card:hover {
+  text-decoration: none;
+  border-color: var(--col-blue-400);
+  background-color: var(--col-blue-200);
 }
 .client-index__image-wrapper {
   aspect-ratio: 16/9;
@@ -22503,6 +22510,7 @@ header .dropdown.current-menu-item > .nav-link {
   object-position: center;
 }
 .client-index__title {
+  color: var(--col-blue-900);
   font-size: var(--fs-500);
   font-weight: var(--fw-semi);
   margin: 1rem 1rem 0.5rem 1rem;
