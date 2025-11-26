@@ -64,7 +64,11 @@ header {
 
   .current_page_item > .nav-link,
   .current_page_parent > .nav-link,
+  .current-page-ancestor > .nav-link,
+  .current-menu-ancestor > .nav-link,
+  .current-menu-parent > .nav-link,
   .dropdown.current-page-ancestor > .nav-link,
+  .dropdown.current-menu-ancestor > .nav-link,
   .dropdown.current-menu-item > .nav-link {
     color: var(--col-blue-400);
     font-weight: var(--fw-semi);
