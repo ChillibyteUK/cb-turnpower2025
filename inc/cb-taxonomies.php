@@ -21,8 +21,8 @@ function cb_register_taxes() {
 
     $args = array(
         'labels'             => array(
-            'name'          => 'Service Types',
-            'singular_name' => 'Service Type',
+            'name'          => 'Sectors',
+            'singular_name' => 'Sector',
         ),
         'public'             => true,
         'publicly_queryable' => true,
@@ -35,47 +35,6 @@ function cb_register_taxes() {
         'show_in_rest'       => true,
         'rewrite'            => false,
     );
-    register_taxonomy( 'service_type', array( 'case_study' ), $args );
-
-	$args = array(
-        'labels'             => array(
-            'name'          => 'Product Types',
-            'singular_name' => 'Product Type',
-        ),
-        'public'             => true,
-        'publicly_queryable' => true,
-        'hierarchical'       => true,
-        'show_ui'            => true,
-        'show_in_nav_menus'  => true,
-        'show_tagcloud'      => false,
-        'show_in_quick_edit' => true,
-        'show_admin_column'  => true,
-        'show_in_rest'       => true,
-        'rewrite'            => false,
-    );
-    register_taxonomy( 'product_type', array( 'case_study' ), $args );
-
-    $args = [
-        "label" => __( "CS Services", "cb-synecore2023" ),
-        "labels" => [
-            "name" => __( "CS Services", "cb-synecore2023" ),
-            "singular_name" => __( "CS Service", "cb-synecore2023" ),
-        ],
-        "public" => true,
-        "publicly_queryable" => false,
-        "hierarchical" => true,
-        "show_ui" => true,
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "query_var" => true,
-        "rewrite" => false,
-        "show_admin_column" => true,
-        "show_in_rest" => true,
-        "show_tagcloud" => false,
-        "show_in_quick_edit" => true,
-        "show_in_graphql" => false,
-    ];
-    register_taxonomy( "service", [ "projects" ], $args );
-
+    register_taxonomy( 'sectors', array( 'clients', 'testimonials' ), $args );
 }
 add_action( 'init', 'cb_register_taxes' );
