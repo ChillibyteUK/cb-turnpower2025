@@ -399,6 +399,59 @@ function cb_time_to_8601( $time_string ) {
 }
 
 /**
+ * Debug helper: highlight elements that overflow the viewport.
+ *
+ * Usage: append `?debug=overflow` to the URL in development.
+ * Outputs a small inline script in the footer that outlines offenders
+ * and logs a console table.
+ */
+function cb_debug_overflow() {
+    if ( ! isset( $_GET['debug'] ) || 'overflow' !== $_GET['debug'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        return;
+    }
+
+        $script = <<<'JS'
+(function highlightOverflow(){
+    try {
+        const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        const offenders = [];
+        document.querySelectorAll('*').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const scrollWidth = el.scrollWidth;
+            const overByRect = Math.max(0, rect.right - vw);
+            const overByScroll = Math.max(0, scrollWidth - vw);
+            const overBy = Math.max(overByRect, overByScroll);
+            if (overBy > 0 && !['HTML','BODY'].includes(el.tagName)) {
+                el.style.outline = '2px solid red';
+                el.setAttribute('data-overflow', Math.round(overBy) + 'px');
+                offenders.push({ el, tag: el.tagName.toLowerCase(), overBy: Math.round(overBy), rectRight: Math.round(rect.right), vw });
+            }
+        });
+        console.table(offenders.map(o => ({
+            tag: o.tag,
+            overByPx: o.overBy,
+            rectRight: o.rectRight,
+            viewport: o.vw,
+            selector: o.el.id ? ('#' + o.el.id) : (o.el.className ? ('.' + o.el.className.toString().trim().replace(/\s+/g,'.')) : o.tag)
+        })));
+        console.log('Highlighted', offenders.length, 'overflowing elements.');
+    } catch(e) {
+        console.warn('Overflow debug failed:', e);
+    }
+})();
+JS;
+
+    if ( function_exists( 'wp_print_inline_script_tag' ) ) {
+        wp_print_inline_script_tag( $script, array( 'type' => 'text/javascript' ) );
+    } else {
+        // Fallback for older WP: echo safely.
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped,WordPress.WP.EnqueuedResources.NonEnqueuedScript
+        echo '<script type=\"text/javascript\">' . $script . '</script>';
+    }
+}
+add_action( 'wp_footer', 'cb_debug_overflow', 99 );
+
+/**
  * Slugify text for URL-safe strings.
  *
  * @param string $text The text to slugify.
@@ -691,7 +744,7 @@ add_shortcode( 'page_list', 'register_page_list_shortcode' );
  * @param int $length The current excerpt length.
  * @return int The modified excerpt length.
  */
-function custom_excerpt_length( $length ) {
+function custom_excerpt_length( $length ) { // phpcs:ignored Generic.CodeAnalysis.UnusedFunctionParameter.Found
     return 25; // Set to your desired number of words.
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length' );

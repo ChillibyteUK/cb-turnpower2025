@@ -61,7 +61,7 @@
     
     // On smaller screens, maintain aspect ratio but allow horizontal clipping.
     @media (max-width: 1400px) {
-        width: 120%;
+        width: 100%;
         background-size: 100% auto;
     }
     

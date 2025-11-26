@@ -22486,7 +22486,7 @@ header .dropdown.current-menu-item > .nav-link {
 }
 @media (max-width: 1400px) {
   .hero-swoop {
-    width: 120%;
+    width: 100%;
     background-size: 100% auto;
   }
 }

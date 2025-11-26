@@ -67,7 +67,7 @@ $block_uid = 'text-image-' . uniqid();
 ?>
 <section id="<?= esc_attr( $block_uid ); ?>" class="text-image <?= esc_attr( implode( ' ', $classes ) ); ?> py-5" <?= $style ? 'style="' . esc_attr( $style ) . '"' : ''; ?>>
   	<div class="container">
-		<div class="row g-5 align-items-center">
+		<div class="row gy-5 gx-4 gx-lg-5 align-items-center">
 			<?php
 			// Always output text column first, image column second in the DOM.
 			// Parameterise data-animate so that on desktop, columns always slide in from outside in.
