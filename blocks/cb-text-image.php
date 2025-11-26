@@ -86,8 +86,10 @@ $block_uid = 'text-image-' . uniqid();
 			<div class="<?= esc_attr( $text_col_width . ' ' . $text_order_class ); ?>" data-aos="fade">
 				<?php
 				if ( get_field( 'title' ) ) {
+					$dot_field = get_field( 'dot' );
+					$dot       = ( is_array( $dot_field ) && in_array( 'Yes', $dot_field, true ) ) ? 'has-dot' : '';
 					?>
-				<<?= esc_attr( $heading_tag ); ?> class="has-700-font-size mb-4 has-dot"><?= wp_kses_post( get_field( 'title' ) ); ?></<?= esc_attr( $heading_tag ); ?>>
+				<<?= esc_attr( $heading_tag ); ?> class="has-700-font-size mb-4 <?= esc_attr( $dot ); ?>"><?= wp_kses_post( get_field( 'title' ) ); ?></<?= esc_attr( $heading_tag ); ?>>
 					<?php
 				}
 				?>

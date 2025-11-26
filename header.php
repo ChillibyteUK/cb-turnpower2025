@@ -114,9 +114,12 @@ do_action( 'wp_body_open' );
                     <a href="/" class="navbar-brand" rel="home"></a>
                     <button class="navbar-toggler input-button" id="navToggle" data-bs-toggle="collapse" data-bs-target=".navbars" type="button" aria-label="Navigation"><i class="fa fa-navicon"></i></button>
                 </div>
-                <div class="d-flex flex-column-reverse flex-lg-column w-100">
+                <div class="d-flex flex-column-reverse flex-lg-column w-100 gap-2">
                     <div id="topNav" class="d-none d-lg-flex w-100 justify-content-end align-items-lg-center">
-                        <a href="/emergency-call-out/" class="btn btn-yellow my-2">Emergency Call Out</a>
+                        <a href="tel:<?= esc_url( parse_phone( get_field( 'contact_phone', 'options' ) ) ); ?>" class="btn btn-yellow mt-3 mb-2">
+							<span class="d-lg-none">Emergency Call Out</span>
+							<span class="d-none d-lg-inline"><i class="fa fa-phone"></i> <?= esc_html( get_field( 'contact_phone', 'options' ) ); ?></span>
+						</a>
                     </div>
                     <?php
 					wp_nav_menu(

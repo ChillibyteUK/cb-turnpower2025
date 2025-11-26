@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<section class="cb-testimonials py-5 has-blue-400-background-color has-background has-white-color">
+<section class="cb-testimonials has-blue-400-background-color has-background has-white-color">
 	<div class="container">
 		<h2 class="has-dot">Testimonials</h2>
 		<?php
