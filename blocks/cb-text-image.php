@@ -106,7 +106,7 @@ $block_uid = 'text-image-' . uniqid();
 					if ( get_field( 'cta' ) ) {
 						$cta = get_field( 'cta' );
 						?>
-						<p class="mt-4"><a class="btn" href="<?= esc_url( $cta['url'] ); ?>"
+						<p class="mt-4"><a class="btn btn--primary" href="<?= esc_url( $cta['url'] ); ?>"
 							target="<?= esc_attr( $cta['target'] ? $cta['target'] : '_self' ); ?>"><?= esc_html( $cta['title'] ); ?></a>
 						</p>
 						<?php

@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 				<h3>Experts in Technical &amp; Compliance Services</h3>
 				<p>As an andwis group company, we are proud to be part of a national network of technical and compliance services across six core areas of expertise.</p>
 				<p>Like us, our colleagues treat customer delivery and long-term partnerships in the highest regard, ensuring we deliver industry-leading technical and compliance solutions from a single provider.</p>
-				<a class="btn btn-primary" href="https://www.andwis.com/" target="_blank">Find out More</a>
+				<a class="btn btn--primary" href="https://www.andwis.com/" target="_blank">Find out More</a>
 			</div>
 			<div class="col-12 col-xxl-8">
 				<div class="row g-2">

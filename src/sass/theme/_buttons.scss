@@ -8,7 +8,7 @@
   --btn-px: 2.5rem;
   --btn-gap: 0.5rem;
   --btn-border-w: 1px;
-  --btn-transition: 160ms ease;
+  --btn-transition: var(--transition);
 }
 
 /* Base button */
@@ -63,7 +63,24 @@
   color: var(--_fg);
   background: var(--_bg);
   border-color: var(--_bd);
+
+  &::after {
+    content: '\f105'; /* FontAwesome angle right */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1em;
+    line-height: 0;
+    display: inline-block;
+    transition: transform var(--btn-transition);
+    will-change: transform;
+  }
+  &:hover {
+    &::after {
+      transform: translateX(4px);
+    }
+  }
 }
+
 .btn:hover,
 .btn:active {
   background: color-mix(in srgb, var(--col-blue-400), white 10%);
