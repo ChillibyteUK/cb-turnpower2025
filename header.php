@@ -108,7 +108,7 @@ do_action( 'wp_body_open' );
 ?>
 <div class="site" id="page">
     <header id="wrapper-navbar" class="fixed-top">
-        <nav id="navbar" class="navbar navbar-expand-lg d-block p-0 pt-2 pt-lg-0" aria-labelledby="main-nav-label">
+        <nav id="navbar" class="navbar navbar-expand-lg d-block p-0 pt-2 pt-lg-0" aria-label="Primary navigation">
             <div class="container mb-2 pb-2 d-block d-lg-flex gap-5">
                 <div class="d-flex w-lg-auto justify-content-between align-items-center px-2">
                     <a href="/" class="navbar-brand" rel="home"></a>

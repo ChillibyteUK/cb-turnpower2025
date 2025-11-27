@@ -45,7 +45,7 @@ defined( 'ABSPATH' ) || exit;
 									get_the_ID(),
 									'full',
 									array(
-										'alt'   => get_the_title(),
+										'alt'   => get_the_title() . ' Logo',
 										'class' => 'client-index__image',
 									)
 								);
