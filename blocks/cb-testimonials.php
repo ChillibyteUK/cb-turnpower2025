@@ -11,16 +11,40 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container">
 		<h2 class="has-dot">Testimonials</h2>
 		<?php
+		// get sector(s) from acf sectors taxonomy field.
+		$sectors = get_field( 'sectors' );
+
+		$args = array(
+			'post_type'      => 'testimonials',
+			'posts_per_page' => -1,
+			'orderby'        => 'menu_order',
+			'order'          => 'ASC',
+		);
+
+		if ( $sectors && ! empty( $sectors ) ) {
+			$sector_terms = array();
+			foreach ( $sectors as $sector ) {
+				// Handle both term objects and term IDs.
+				if ( is_object( $sector ) && isset( $sector->term_id ) ) {
+					$sector_terms[] = $sector->term_id;
+				} elseif ( is_numeric( $sector ) ) {
+					$sector_terms[] = $sector;
+				}
+			}
+			if ( ! empty( $sector_terms ) ) {
+				$args['tax_query'] = array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+					array(
+						'taxonomy' => 'sectors',
+						'field'    => 'term_id',
+						'terms'    => $sector_terms,
+					),
+				);
+			}
+		}
 
 		// slider of testimonial posts.
-		$testimonial_posts = new WP_Query(
-			array(
-				'post_type'      => 'testimonials',
-				'posts_per_page' => -1,
-				'orderby'        => 'menu_order',
-				'order'          => 'ASC',
-			)
-		);
+		$testimonial_posts = new WP_Query( $args );
+
 		if ( $testimonial_posts->have_posts() ) {
 			?>
 			<div class="swiper testimonial-swiper">
