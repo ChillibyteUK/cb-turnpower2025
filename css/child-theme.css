@@ -22106,7 +22106,7 @@ header .dropdown.current-menu-item > .nav-link {
 .home-hero {
   position: relative;
   height: 80svh;
-  min-height: 600px;
+  min-height: 80svh;
   overflow: hidden;
   isolation: isolate;
   color: var(--col-white);
@@ -22442,7 +22442,8 @@ header .dropdown.current-menu-item > .nav-link {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 500px;
+  height: 75svh;
+  min-height: 75svh;
   isolation: isolate;
   color: var(--col-white);
 }
@@ -22604,6 +22605,12 @@ body {
   top: 32px;
 }
 
+@media (min-width: 768px) {
+  .cols-lg-3 {
+    -moz-columns: 2;
+    columns: 2;
+  }
+}
 @media (min-width: 992px) {
   .cols-lg-2 {
     -moz-columns: 2;

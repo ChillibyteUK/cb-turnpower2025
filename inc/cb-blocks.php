@@ -19,6 +19,48 @@ function acf_blocks() {
 
         acf_register_block_type(
             array(
+                'name'            => 'cb_cta',
+                'title'           => __( 'CB CTA' ),
+                'category'        => 'layout',
+                'icon'            => 'cover-image',
+                'render_template' => 'blocks/cb-cta.php',
+                'mode'            => 'edit',
+                'supports'        => array(
+                    'mode'      => false,
+                    'anchor'    => true,
+                    'className' => true,
+                    'align'     => true,
+					'color'     => array(
+                        'background' => true,
+						'text'       => false,
+                    ),
+                ),
+            )
+        );
+
+        acf_register_block_type(
+            array(
+                'name'            => 'cb_checklist',
+                'title'           => __( 'CB Checklist' ),
+                'category'        => 'layout',
+                'icon'            => 'cover-image',
+                'render_template' => 'blocks/cb-checklist.php',
+                'mode'            => 'edit',
+                'supports'        => array(
+                    'mode'      => false,
+                    'anchor'    => true,
+                    'className' => true,
+                    'align'     => true,
+					'color'     => array(
+                        'background' => true,
+						'text'       => false,
+                    ),
+                ),
+            )
+        );
+
+        acf_register_block_type(
+            array(
                 'name'            => 'cb_faqs',
                 'title'           => __( 'CB FAQs' ),
                 'category'        => 'layout',

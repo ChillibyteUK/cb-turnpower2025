@@ -15,6 +15,11 @@ body {
   top: 32px; // Admin bar height
 }
 
+@media (min-width: 768px) {
+  .cols-lg-3 {
+    columns: 2;
+  }
+}
 @media (min-width: 992px) {
   .cols-lg-2 {
     columns: 2;

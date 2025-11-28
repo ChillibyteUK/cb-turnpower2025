@@ -541,21 +541,31 @@ add_action( 'send_headers', 'enable_strict_transport_security_hsts_header' );
 /**
  * Convert field content to an HTML list.
  *
- * @param string $field The field content to convert.
+ * @param string      $field The field content to convert.
+ * @param string|null $icon  Optional. Font Awesome icon class (e.g., 'fa-check', 'fa-solid fa-star').
  * @return string The HTML list.
  */
-function cb_list( $field ) {
+function cb_list( $field, $icon = null ) {
     ob_start();
     $field   = strip_tags( $field, '<br />' );
     $bullets = preg_split( "/\r\n|\n|\r/", $field );
+
     foreach ( $bullets as $b ) {
         if ( '' === $b ) {
             continue;
         }
-		?>
+
+        if ( $icon ) {
+            ?>
+        <li><span class="fa-li"><i class="<?php echo esc_attr( $icon ); ?>"></i></span><?php echo esc_html( $b ); ?></li>
+            <?php
+        } else {
+            ?>
         <li><?php echo esc_html( $b ); ?></li>
-		<?php
+            <?php
+        }
     }
+
     return ob_get_clean();
 }
 

@@ -15,7 +15,7 @@ $bg = get_field( 'background_image' );
 	<div class="content">
 		<div class="container h-100">
 			<div class="row h-100">
-				<div class="col-lg-7 my-auto">
+				<div class="col-lg-8 my-auto">
 					<h1 class="has-dot"><?= esc_html( get_field( 'title' ) ); ?></h1>
 					<div class="words mb-4"><?= wp_kses_post( get_field( 'intro' ) ); ?></div>
 					<?php
