@@ -16,7 +16,13 @@ if ( ! empty( $block['align'] ) ) {
 }
 
 if ( ! empty( $block['backgroundColor'] ) ) {
-	$class_name .= ' has-' . $block['backgroundColor'] . '-background-color has-background';
+	$class_name .= ' has-' . $block['backgroundColor'] . '-background-color has-background py-5';
+}
+
+if ( ! empty( $block['textColor'] ) ) {
+	$class_name .= ' has-' . $block['textColor'] . '-color has-text-color';
+} else {
+	$class_name .= ' has-white-color has-text-color';
 }
 ?>
 <section class="<?= esc_attr( $class_name ); ?> has-white-color">
