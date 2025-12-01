@@ -34,5 +34,5 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 		</div>
 	</div>
-	<div class="hero-swoop"></div>
+	<div class="hero-swoop hero-swoop--blue-900"></div>
 </section>
