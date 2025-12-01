@@ -50,7 +50,7 @@ defined( 'ABSPATH' ) || exit;
                 &copy; <?= esc_html( gmdate( 'Y' ) ); ?> Turnpower Services Limited. Company Number 02840678
             </div>
             <div>
-				<a href="/terms-of-use/">Terms of use</a> | <a href="/privacy-policy/">Privacy</a> & <a href="/cookie-policy/">Cookies</a> |
+				<a href="/privacy-policy/">Privacy</a> & <a href="/cookie-policy/">Cookies</a> |
                 <a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb" aria-label="Chillibyte website"></a>
             </div>
         </div>
