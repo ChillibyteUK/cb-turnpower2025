@@ -22601,6 +22601,256 @@ header .dropdown.current-menu-item > .nav-link {
   padding: 0 1rem 2rem 0;
 }
 
+.careers-index {
+  padding: 3rem 0;
+}
+.careers-index__heading {
+  margin-bottom: 0;
+}
+.careers-index__no-vacancies {
+  font-size: 1.125rem;
+  color: var(--wp--preset--color--blue-900);
+  padding: 2rem 0;
+}
+
+.career-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: #fff;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.career-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+.career-card__body {
+  flex: 1;
+  padding: 1.5rem;
+}
+.career-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.career-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.career-card__badge--type {
+  background: var(--col-blue-300);
+  color: contrast-color(var(--col-blue-300));
+}
+.career-card__badge--location {
+  background: var(--col-blue-300);
+  color: contrast-color(var(--col-blue-300));
+}
+.career-card__badge--tenure {
+  background: var(--col-blue-200, #d0e8f5);
+  color: contrast-color(var(--col-blue-200));
+}
+.career-card__badge--date {
+  background: var(--col-blue-200, #d0e8f5);
+  color: contrast-color(var(--col-blue-200));
+}
+.career-card__title {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  margin: 0.75rem 0 0.5rem;
+  color: var(--wp--preset--color--blue-900);
+}
+.career-card__salary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--red, #c0392b);
+  margin-bottom: 0.5rem;
+}
+.career-card__salary .fa {
+  margin-right: 0.2rem;
+}
+.career-card__excerpt {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0;
+}
+.career-card__footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+.career-card__link {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--wp--preset--color--blue-900);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap 0.2s ease;
+}
+.career-card__link:hover {
+  gap: 0.7rem;
+  color: var(--wp--preset--color--red, #c0392b);
+  text-decoration: none;
+}
+
+.career-hero {
+  padding: 3rem 0 2rem;
+  background: var(--wp--preset--color--blue-900);
+  color: #fff;
+}
+.career-hero__title {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.career-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.career-hero .breadcrumbs,
+.career-hero .breadcrumbs a,
+.career-hero #breadcrumbs,
+.career-hero #breadcrumbs a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.career-body {
+  background: #fff;
+}
+
+.career-section__title {
+  font-size: 1.35rem;
+  color: var(--wp--preset--color--blue-900);
+  border-bottom: 2px solid var(--wp--preset--color--red, #c0392b);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+.career-section--equality {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 2rem;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.career-list {
+  padding-left: 1.25rem;
+}
+.career-list li {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+
+.career-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+.career-sidebar__heading {
+  font-size: 1.1rem;
+  color: var(--wp--preset--color--blue-900);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--wp--preset--color--red, #c0392b);
+}
+.career-sidebar__details {
+  background: var(--wp--preset--color--blue-900);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.career-sidebar__details .career-sidebar__heading {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+.career-sidebar__apply {
+  padding: 0;
+}
+.career-sidebar__apply-btn {
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.4rem;
+}
+
+.career-apply-modal .modal-header {
+  background: var(--wp--preset--color--blue-900);
+  color: #fff;
+  border-bottom: none;
+}
+.career-apply-modal .modal-header .modal-title {
+  color: #fff;
+}
+.career-apply-modal .modal-header .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+.career-apply-modal .modal-body {
+  padding: 2rem;
+}
+.career-apply-modal .gform_wrapper {
+  margin: 0;
+}
+.career-apply-modal .gform_wrapper .gfield_label {
+  font-weight: 600;
+}
+.career-apply-modal .gform_wrapper .gform_footer,
+.career-apply-modal .gform_wrapper .gform_page_footer {
+  margin-top: 1rem;
+}
+
+.career-details {
+  margin: 0;
+}
+.career-details dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+.career-details dt:first-child {
+  margin-top: 0;
+}
+.career-details dt .fa {
+  margin-right: 0.3rem;
+}
+.career-details dd {
+  font-weight: 600;
+  margin-left: 0;
+  font-size: 0.95rem;
+}
+
+.career-other-roles {
+  background: var(--wp--preset--color--blue-400, #d0e8f5);
+}
+.career-other-roles__heading {
+  font-size: 1.1rem;
+  color: var(--wp--preset--color--blue-900);
+  margin-bottom: 0.75rem;
+}
+.career-other-roles__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+}
+.career-other-roles__list li a {
+  color: var(--wp--preset--color--blue-900);
+  font-weight: 600;
+  text-decoration: none;
+}
+.career-other-roles__list li a:hover {
+  text-decoration: underline;
+}
+
 body {
   background-color: var(--col-white);
 }

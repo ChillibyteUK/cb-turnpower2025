@@ -65,17 +65,20 @@ function cb_register_post_types() {
 				'not_found_in_trash' => 'No careers in trash',
 			),
 			'has_archive'        => false,
-			'publicly_queryable' => false, // (keeps single pages accessible)
+			'publicly_queryable' => true,
 			'public'             => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'show_in_rest'       => true,
 			'menu_position'      => 25,
 			'menu_icon'          => 'dashicons-nametag',
-			'supports'           => array( 'title', 'thumbnail', 'editor' ),
+			'supports'           => array( 'title' ),
 			'capability_type'    => 'post',
 			'map_meta_cap'       => true,
-			'rewrite'            => false,
+			'rewrite'            => array(
+				'slug'       => 'careers',
+				'with_front' => false,
+			),
 		),
 	);
 

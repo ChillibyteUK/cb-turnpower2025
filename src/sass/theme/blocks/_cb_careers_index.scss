@@ -1,0 +1,309 @@
+// Careers Index Block
+// ─────────────────────────────────────────────────────────────────────────────
+
+.careers-index {
+  padding: 3rem 0;
+
+  &__heading {
+    margin-bottom: 0;
+  }
+
+  &__no-vacancies {
+    font-size: 1.125rem;
+    color: var(--wp--preset--color--blue-900);
+    padding: 2rem 0;
+  }
+}
+
+// Career card — used on both the index block and can be referenced on the single
+// ─────────────────────────────────────────────────────────────────────────────
+
+.career-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: #fff;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+  }
+
+  &__body {
+    flex: 1;
+    padding: 1.5rem;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+    &--type {
+      background: var(--col-blue-300);
+      color: contrast-color(var(--col-blue-300));
+    }
+
+    &--location {
+      background: var(--col-blue-300);
+      color: contrast-color(var(--col-blue-300));
+    }
+
+    &--tenure {
+      background: var(--col-blue-200, #d0e8f5);
+      color: contrast-color(var(--col-blue-200));
+    }
+
+    &--date {
+      background: var(--col-blue-200, #d0e8f5);
+      color: contrast-color(var(--col-blue-200));
+    }
+  }
+
+  &__title {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    margin: 0.75rem 0 0.5rem;
+    color: var(--wp--preset--color--blue-900);
+  }
+
+  &__salary {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--wp--preset--color--red, #c0392b);
+    margin-bottom: 0.5rem;
+
+    .fa {
+      margin-right: 0.2rem;
+    }
+  }
+
+  &__excerpt {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0;
+  }
+
+  &__footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--wp--preset--color--blue-900);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap 0.2s ease;
+
+    &:hover {
+      gap: 0.7rem;
+      color: var(--wp--preset--color--red, #c0392b);
+      text-decoration: none;
+    }
+  }
+}
+
+// Single career post
+// ─────────────────────────────────────────────────────────────────────────────
+
+.career-hero {
+  padding: 3rem 0 2rem;
+  background: var(--wp--preset--color--blue-900);
+  color: #fff;
+
+  &__title {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .breadcrumbs,
+  .breadcrumbs a,
+  #breadcrumbs,
+  #breadcrumbs a {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.career-body {
+  background: #fff;
+}
+
+.career-section {
+  &__title {
+    font-size: 1.35rem;
+    color: var(--wp--preset--color--blue-900);
+    border-bottom: 2px solid var(--wp--preset--color--red, #c0392b);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  &--equality {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 2rem;
+    color: #666;
+    font-size: 0.875rem;
+  }
+}
+
+.career-list {
+  padding-left: 1.25rem;
+
+  li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+  }
+}
+
+.career-sidebar {
+  position: sticky;
+  top: 2rem;
+
+  &__heading {
+    font-size: 1.1rem;
+    color: var(--wp--preset--color--blue-900);
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--wp--preset--color--red, #c0392b);
+  }
+
+  &__details {
+    background: var(--wp--preset--color--blue-900);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+
+    .career-sidebar__heading {
+      color: #fff;
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__apply {
+    padding: 0;
+
+    &-btn {
+      font-size: 1rem;
+      padding: 0.85rem 1.5rem;
+      border-radius: 0.4rem;
+    }
+  }
+}
+
+// Apply modal
+// ─────────────────────────────────────────────────────────────────────────────
+
+.career-apply-modal {
+  .modal-header {
+    background: var(--wp--preset--color--blue-900);
+    color: #fff;
+    border-bottom: none;
+
+    .modal-title {
+      color: #fff;
+    }
+
+    .btn-close {
+      filter: invert(1) grayscale(100%) brightness(200%);
+    }
+  }
+
+  .modal-body {
+    padding: 2rem;
+  }
+
+  // Gravity Forms overrides inside the modal
+  .gform_wrapper {
+    margin: 0;
+
+    .gfield_label {
+      font-weight: 600;
+    }
+
+    .gform_footer,
+    .gform_page_footer {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.career-details {
+  margin: 0;
+
+  dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+    margin-top: 1rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .fa {
+      margin-right: 0.3rem;
+    }
+  }
+
+  dd {
+    font-weight: 600;
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
+}
+
+.career-other-roles {
+  background: var(--wp--preset--color--blue-400, #d0e8f5);
+
+  &__heading {
+    font-size: 1.1rem;
+    color: var(--wp--preset--color--blue-900);
+    margin-bottom: 0.75rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+
+    li a {
+      color: var(--wp--preset--color--blue-900);
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

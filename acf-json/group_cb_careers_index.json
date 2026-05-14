@@ -1,0 +1,74 @@
+{
+  "key": "group_cb_careers_index",
+  "title": "CB Careers Index",
+  "fields": [
+    {
+      "key": "field_cb_careers_index_msg",
+      "label": "CB Careers Index",
+      "name": "",
+      "aria-label": "",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "message": "Displays a listing of all current job vacancies from the Careers post type.",
+      "new_lines": "",
+      "esc_html": 0
+    },
+    {
+      "key": "field_cb_careers_index_heading",
+      "label": "Heading",
+      "name": "heading",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "Current Opportunities",
+      "maxlength": "",
+      "allow_in_bindings": 0,
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cb_careers_index_no_vac",
+      "label": "No Vacancies Message",
+      "name": "no_vacancies_message",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Displayed when there are no published job posts.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "We don't currently have any vacancies. Please check back soon or send your CV to our team.",
+      "rows": 3,
+      "placeholder": "",
+      "new_lines": "br",
+      "maxlength": "",
+      "allow_in_bindings": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/cb-careers-index"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Fields for the CB Careers Index block.",
+  "show_in_rest": 0,
+  "display_title": "",
+  "modified": 1747216800
+}

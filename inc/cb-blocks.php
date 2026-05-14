@@ -19,6 +19,23 @@ function acf_blocks() {
 
         acf_register_block_type(
             array(
+                'name'            => 'cb_careers_index',
+                'title'           => __( 'CB Careers Index' ),
+                'category'        => 'layout',
+                'icon'            => 'nametag',
+                'render_template' => 'blocks/cb-careers-index.php',
+                'mode'            => 'edit',
+                'supports'        => array(
+                    'mode'      => false,
+                    'anchor'    => true,
+                    'className' => true,
+                    'align'     => true,
+                ),
+            )
+        );
+
+        acf_register_block_type(
+            array(
                 'name'            => 'cb_cta',
                 'title'           => __( 'CB CTA' ),
                 'category'        => 'layout',
