@@ -116,7 +116,7 @@ do_action( 'wp_body_open' );
                 </div>
                 <div class="d-flex flex-column-reverse flex-lg-column w-100 gap-2">
                     <div id="topNav" class="d-none d-lg-flex w-100 justify-content-end align-items-lg-center">
-                        <a href="tel:<?= esc_url( parse_phone( get_field( 'contact_phone', 'options' ) ) ); ?>" class="btn btn-yellow mt-3 mb-2">
+                        <a href="tel:<?= esc_attr( parse_phone( get_field( 'contact_phone', 'options' ) ) ); ?>" class="btn btn-yellow mt-3 mb-2">
 							<span class="d-lg-none">Emergency Call Out</span>
 							<span class="d-none d-lg-inline"><i class="fa fa-phone"></i> <?= esc_html( get_field( 'contact_phone', 'options' ) ); ?></span>
 						</a>
