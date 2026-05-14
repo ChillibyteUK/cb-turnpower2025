@@ -22751,7 +22751,7 @@ header .dropdown.current-menu-item > .nav-link {
 
 .career-sidebar {
   position: sticky;
-  top: 2rem;
+  top: calc(var(--h-top) + 2rem);
 }
 .career-sidebar__heading {
   font-size: 1.1rem;

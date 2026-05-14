@@ -105,11 +105,13 @@ if ( 'remote' === $location_type ) {
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10">
-					<?php
-					if ( function_exists( 'yoast_breadcrumb' ) ) {
-						yoast_breadcrumb( '<div id="breadcrumbs" class="breadcrumbs fs-ui mb-3">', '</div>' );
-					}
-					?>
+					<div id="breadcrumbs" class="breadcrumbs fs-ui mb-3">
+						<a href="/"><strong>Home</strong></a>
+						<span class="breadcrumb-sep">/</span>
+						<a href="/careers/"><strong>Careers</strong></a>
+						<span class="breadcrumb-sep">/</span>
+						<span class="breadcrumb-current"><?= esc_html( get_the_title() ); ?></span>
+					</div>
 					<h1 class="career-hero__title"><?= esc_html( get_the_title() ); ?></h1>
 					<div class="career-hero__meta">
 						<?php if ( $emp_label ) : ?>
