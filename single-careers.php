@@ -263,25 +263,81 @@ if ( 'remote' === $location_type ) {
 	);
 	if ( $other_jobs->have_posts() ) {
 		?>
-	<section class="career-other-roles py-4">
+	<section class="career-other-roles py-5">
 		<div class="container">
-			<div class="row">
+			<div class="row mb-4">
 				<div class="col">
 					<h3 class="career-other-roles__heading">Other Current Opportunities</h3>
-					<ul class="career-other-roles__list">
-						<?php
-                        while ( $other_jobs->have_posts() ) :
-							$other_jobs->the_post();
-							?>
-						<li>
-							<a href="<?= esc_url( get_permalink() ); ?>"><?= esc_html( get_the_title() ); ?></a>
-						</li>
-							<?php
-                        endwhile;
-						wp_reset_postdata();
-						?>
-					</ul>
 				</div>
+			</div>
+			<div class="row g-4">
+				<?php
+				while ( $other_jobs->have_posts() ) :
+					$other_jobs->the_post();
+					$o_id          = get_the_ID();
+					$o_emp_type    = get_field( 'employment_type', $o_id );
+					$o_emp_label   = $emp_labels[ $o_emp_type ] ?? $o_emp_type;
+					$o_tenure_val  = get_field( 'tenure', $o_id );
+					$o_tenure_lbl  = $tenure_labels[ $o_tenure_val ] ?? $o_tenure_val;
+					$o_loc_type    = get_field( 'location_type', $o_id );
+					$o_locality    = get_field( 'address_locality', $o_id );
+					if ( 'remote' === $o_loc_type ) {
+						$o_location = 'Remote';
+					} elseif ( 'hybrid' === $o_loc_type ) {
+						$o_location = 'Hybrid' . ( $o_locality ? ' · ' . $o_locality : '' );
+					} else {
+						$o_location = $o_locality ?: 'On-site';
+					}
+					$o_sal_type = get_field( 'salary_type', $o_id );
+					if ( 'range' === $o_sal_type ) {
+						$o_min     = (int) get_field( 'minimum_salary', $o_id );
+						$o_max     = (int) get_field( 'maximum_salary', $o_id );
+						$o_unit    = get_field( 'salary_unit', $o_id );
+						$o_unitstr = $unit_map[ $o_unit ] ?? strtolower( (string) $o_unit );
+						if ( $o_min && $o_max ) {
+							$o_salary = '£' . number_format( $o_min ) . ' – £' . number_format( $o_max ) . ' ' . $o_unitstr;
+						} elseif ( $o_min ) {
+							$o_salary = '£' . number_format( $o_min ) . '+ ' . $o_unitstr;
+						} else {
+							$o_salary = 'Competitive / Negotiable';
+						}
+					} else {
+						$o_salary = 'Competitive / Negotiable';
+					}
+				?>
+				<div class="col-12 col-md-6 col-xl-4">
+					<article class="career-card h-100">
+						<div class="career-card__body">
+							<div class="career-card__meta mb-2">
+								<?php if ( $o_emp_label ) : ?>
+								<span class="career-card__badge career-card__badge--type"><?= esc_html( $o_emp_label ); ?></span>
+								<?php endif; ?>
+								<?php if ( $o_tenure_lbl ) : ?>
+								<span class="career-card__badge career-card__badge--tenure"><?= esc_html( $o_tenure_lbl ); ?></span>
+								<?php endif; ?>
+								<?php if ( $o_location ) : ?>
+								<span class="career-card__badge career-card__badge--location">
+									<i class="fa fa-location-dot" aria-hidden="true"></i>
+									<?= esc_html( $o_location ); ?>
+								</span>
+								<?php endif; ?>
+							</div>
+							<h4 class="career-card__title"><?= esc_html( get_the_title() ); ?></h4>
+							<?php if ( $o_salary ) : ?>
+							<p class="career-card__salary">
+								<i class="fa fa-sterling-sign" aria-hidden="true"></i>
+								<?= esc_html( $o_salary ); ?>
+							</p>
+							<?php endif; ?>
+						</div>
+						<div class="career-card__footer">
+							<a href="<?= esc_url( get_permalink() ); ?>" class="career-card__link stretched-link">
+								View role <i class="fa fa-arrow-right" aria-hidden="true"></i>
+							</a>
+						</div>
+					</article>
+				</div>
+				<?php endwhile; wp_reset_postdata(); ?>
 			</div>
 		</div>
 	</section>

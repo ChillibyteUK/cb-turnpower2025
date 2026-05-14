@@ -22830,25 +22830,9 @@ header .dropdown.current-menu-item > .nav-link {
   background: var(--wp--preset--color--blue-400, #d0e8f5);
 }
 .career-other-roles__heading {
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   color: var(--wp--preset--color--blue-900);
-  margin-bottom: 0.75rem;
-}
-.career-other-roles__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 2rem;
-}
-.career-other-roles__list li a {
-  color: var(--wp--preset--color--blue-900);
-  font-weight: 600;
-  text-decoration: none;
-}
-.career-other-roles__list li a:hover {
-  text-decoration: underline;
+  margin-bottom: 0;
 }
 
 body {

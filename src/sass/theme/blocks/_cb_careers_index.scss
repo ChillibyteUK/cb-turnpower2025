@@ -183,7 +183,7 @@
 
 .career-sidebar {
   position: sticky;
-  top: calc( var(--h-top) + 2rem );
+  top: calc(var(--h-top) + 2rem);
 
   &__heading {
     font-size: 1.1rem;
@@ -283,27 +283,8 @@
   background: var(--wp--preset--color--blue-400, #d0e8f5);
 
   &__heading {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
     color: var(--wp--preset--color--blue-900);
-    margin-bottom: 0.75rem;
-  }
-
-  &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 2rem;
-
-    li a {
-      color: var(--wp--preset--color--blue-900);
-      font-weight: 600;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+    margin-bottom: 0;
   }
 }
