@@ -150,7 +150,7 @@ if ( 'remote' === $location_type ) {
 					if ( $role_purpose ) {
 						?>
 					<div class="career-section career-section--purpose mb-4">
-						<p class="lead"><?= nl2br( esc_html( $role_purpose ) ); ?></p>
+						<p class="lead"><?= wp_kses_post( nl2br( $role_purpose ) ); ?></p>
 					</div>
 						<?php
 					}
