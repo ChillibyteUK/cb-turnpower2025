@@ -22670,7 +22670,7 @@ header .dropdown.current-menu-item > .nav-link {
 .career-card__salary {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--wp--preset--color--red, #c0392b);
+  color: var(--wp--preset--color--blue-900);
   margin-bottom: 0.5rem;
 }
 .career-card__salary .fa {
@@ -22730,7 +22730,7 @@ header .dropdown.current-menu-item > .nav-link {
 .career-section__title {
   font-size: 1.35rem;
   color: var(--wp--preset--color--blue-900);
-  border-bottom: 2px solid var(--wp--preset--color--red, #c0392b);
+  border-bottom: 2px solid var(--wp--preset--color--blue-900);
   padding-bottom: 0.4rem;
   margin-bottom: 1rem;
 }
@@ -22758,7 +22758,7 @@ header .dropdown.current-menu-item > .nav-link {
   color: var(--wp--preset--color--blue-900);
   margin-bottom: 1rem;
   padding-bottom: 0.4rem;
-  border-bottom: 2px solid var(--wp--preset--color--red, #c0392b);
+  border-bottom: 2px solid var(--wp--preset--color--blue-900);
 }
 .career-sidebar__details {
   background: var(--wp--preset--color--blue-900);

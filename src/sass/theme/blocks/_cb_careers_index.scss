@@ -86,7 +86,7 @@
   &__salary {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--wp--preset--color--red, #c0392b);
+    color: var(--wp--preset--color--blue-900);
     margin-bottom: 0.5rem;
 
     .fa {
@@ -159,7 +159,7 @@
   &__title {
     font-size: 1.35rem;
     color: var(--wp--preset--color--blue-900);
-    border-bottom: 2px solid var(--wp--preset--color--red, #c0392b);
+    border-bottom: 2px solid var(--wp--preset--color--blue-900);
     padding-bottom: 0.4rem;
     margin-bottom: 1rem;
   }
@@ -190,7 +190,7 @@
     color: var(--wp--preset--color--blue-900);
     margin-bottom: 1rem;
     padding-bottom: 0.4rem;
-    border-bottom: 2px solid var(--wp--preset--color--red, #c0392b);
+    border-bottom: 2px solid var(--wp--preset--color--blue-900);
   }
 
   &__details {
