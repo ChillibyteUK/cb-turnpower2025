@@ -1,4 +1,4 @@
-<section class="contact_form py-5 bg-dark text-white" id="contact">
+<section class="contact_form py-5 text-white" id="contact">
     <div class="container-xl">
         <h2 class="mb-4">Speak to an expert</h2>
         <div class="row">
