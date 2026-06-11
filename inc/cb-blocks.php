@@ -15,7 +15,7 @@
 function acf_blocks() {
     if ( function_exists( 'acf_register_block_type' ) ) {
 
-		// INSERT NEW BLOCKS HERE.
+        // INSERT NEW BLOCKS HERE.
 
         acf_register_block_type(
             array(
@@ -47,9 +47,9 @@ function acf_blocks() {
                     'anchor'    => true,
                     'className' => true,
                     'align'     => true,
-					'color'     => array(
+                    'color'     => array(
                         'background' => true,
-						'text'       => true,
+                        'text'       => true,
                     ),
                 ),
             )
@@ -68,9 +68,9 @@ function acf_blocks() {
                     'anchor'    => true,
                     'className' => true,
                     'align'     => true,
-					'color'     => array(
+                    'color'     => array(
                         'background' => true,
-						'text'       => true,
+                        'text'       => true,
                     ),
                 ),
             )
@@ -193,7 +193,7 @@ function acf_blocks() {
                     'align'     => true,
                     'color'     => array(
                         'background' => true,
-						'text'       => true,
+                        'text'       => true,
                     ),
                 ),
             )
@@ -356,25 +356,73 @@ function acf_blocks() {
             )
         );
 
+        acf_register_block_type(array(
+            'name'              => 'cb_casenav',
+            'title'             => __('CB Case Study Navigation'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'blocks/cb_casenav.php',
+            'mode'  => 'edit',
+            'supports' => array('mode' => false),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'cb_contact_form',
+            'title'             => __('CB Contact Form'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'blocks/cb_contact_form.php',
+            'mode'  => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        
+        acf_register_block_type(array(
+            'name'              => 'cb_quote',
+            'title'             => __('CB Quote'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'blocks/cb_quote.php',
+            'mode'  => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'              => 'cb_hero_single',
+            'title'             => __('CB Hero'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'blocks/cb_hero_single.php',
+            'mode'  => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'              => 'cb_all_projects',
+            'title'             => __('CB All Projects'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'blocks/cb_all_projects.php',
+            'mode'  => 'edit',
+            'supports' => array('mode' => false),
+        ));
+
     }
 }
 add_action( 'acf/init', 'acf_blocks' );
 
 // Auto-sync ACF field groups from acf-json folder.
 add_filter(
-	'acf/settings/save_json',
-	function ( $path ) { // phpcs:ignore
-		return get_stylesheet_directory() . '/acf-json';
-	}
+    'acf/settings/save_json',
+    function ( $path ) { // phpcs:ignore
+        return get_stylesheet_directory() . '/acf-json';
+    }
 );
 
 add_filter(
-	'acf/settings/load_json',
-	function ( $paths ) {
-		unset( $paths[0] );
-		$paths[] = get_stylesheet_directory() . '/acf-json';
-		return $paths;
-	}
+    'acf/settings/load_json',
+    function ( $paths ) {
+        unset( $paths[0] );
+        $paths[] = get_stylesheet_directory() . '/acf-json';
+        return $paths;
+    }
 );
 
 /**
@@ -386,15 +434,15 @@ add_filter(
  */
 function core_block_type_args( $args, $name ) {
 
-	if ( 'core/paragraph' === $name ) {
-		$args['render_callback'] = 'modify_core_add_container';
-	}
-	if ( 'core/heading' === $name ) {
-		$args['render_callback'] = 'modify_core_add_container';
-	}
-	if ( 'core/list' === $name ) {
-		$args['render_callback'] = 'modify_core_add_container';
-	}
+    if ( 'core/paragraph' === $name ) {
+        $args['render_callback'] = 'modify_core_add_container';
+    }
+    if ( 'core/heading' === $name ) {
+        $args['render_callback'] = 'modify_core_add_container';
+    }
+    if ( 'core/list' === $name ) {
+        $args['render_callback'] = 'modify_core_add_container';
+    }
 
     return $args;
 }
@@ -432,8 +480,8 @@ function modify_core_add_container( $attributes, $content ) {
     <div class="container">
         <?= wp_kses_post( $content ); ?>
     </div>
-	<?php
-	$content = ob_get_clean();
+    <?php
+    $content = ob_get_clean();
     return $content;
 }
 
